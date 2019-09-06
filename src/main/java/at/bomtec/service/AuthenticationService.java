@@ -14,7 +14,7 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 
 public class AuthenticationService {
-	static final long EXPIRATIONTIME = 864_000_00; // 1 day in milliseconds
+	static final long EXPIRATIONTIME = 31*864_000_00; // 1 day in milliseconds
 	static final String SIGNINGKEY = "SecretKey";
 	static final String PREFIX = "Bearer";
 
