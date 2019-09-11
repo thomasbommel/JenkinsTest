@@ -1,4 +1,4 @@
-package at.bomtec;
+package com.packt.cardatabase;
 
 import java.util.Arrays;
 
@@ -16,7 +16,7 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
-import at.bomtec.service.UserDetailServiceImpl;
+import com.packt.cardatabase.service.UserDetailServiceImpl;
 
 @Configuration
 @EnableWebSecurity
@@ -24,13 +24,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Autowired
 	private UserDetailServiceImpl userDetailsService; 
 
-//	  @Override
-//	  protected void configure(HttpSecurity http) throws Exception {
-//		 http.csrf().disable().cors().and().authorizeRequests()
-//		  .antMatchers(HttpMethod.POST, "/login").permitAll();
-//	  }
-	
-	
 	  @Override
 	  protected void configure(HttpSecurity http) throws Exception {
 		 http.csrf().disable().cors().and().authorizeRequests()
